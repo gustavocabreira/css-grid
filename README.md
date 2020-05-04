@@ -155,5 +155,4 @@ Agora, automaticamente, o resto se dividirá no grid. Precisamos, apenas, alinha
     justify-self: center;
     align-self: center;
 }
-
 ```
