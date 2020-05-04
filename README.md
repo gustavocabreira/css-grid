@@ -101,7 +101,7 @@ Para explicar como funciona a delimitação de espaçamento de itens no grid, pr
 Linhas virtuais são as linhas que delimitam o onde começam e terminam as linhas do seu grid.
 
 #### 3 linhas
-Um grid com quatro colunas terá, na verdade, quatro linhas virtuais (representado pelas linhas pontilhadas). Contamos, também, a primeira linha do grid como uma linha. Ou seja, temos: 
+Um grid com três linhas terá, na verdade, quatro linhas virtuais (representado pelas linhas pontilhadas). Contamos, também, a primeira linha do grid como uma linha. Ou seja, temos: 
 ```
 ----------------
 linha do grid
