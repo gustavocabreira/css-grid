@@ -1,0 +1,50 @@
+<html>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            height: 300px;
+        }
+
+        .container > div:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .container > div:nth-child(2) {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .container > div:nth-child(n + 2) {
+            justify-self: center;
+            align-self: center;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="item">ITEM 1</div>
+            <div class="item">ITEM 2</div>
+            <div class="item">ITEM 3</div>
+            <div class="item">ITEM 4</div>
+            <div class="item">ITEM 5</div>
+        </div>
+    </body>
+</html>
