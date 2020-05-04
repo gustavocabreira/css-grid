@@ -137,7 +137,7 @@ Para desenharmos o layout da seguinte forma, precisamos definir que o primeiro i
     align-self: center;
 }
 ```
-Precisamos, agora, definir o segundo item. Sua coluna começará na segunda linha virtual do grid e terminará na quinta linha virtual do grid.
+Precisamos, agora, definir o segundo item. Sua coluna começará na segunda linha virtual do grid e terminará na quarta linha virtual do grid.
 ```css
 .container > div:nth-child(2) {
     grid-column-start: 2;
