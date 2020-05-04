@@ -4,7 +4,7 @@ CSS Grid é um sistema bidimensional, ou seja, ele consegue controlar linhas e c
 ## Container
 
 O container é a div pai que irá armazenar os itens do grid. Nele, colocaremos o display como grid.
-```
+```html
 <div class="container">
     <div class="item">ITEM 1</div>
     <div class="item">ITEM 2</div>
@@ -13,7 +13,7 @@ O container é a div pai que irá armazenar os itens do grid. Nele, colocaremos 
     <div class="item">ITEM 5</div>
 </div>
 ```
-```
+```css
 .container {
     display: grid;
 }
@@ -29,7 +29,7 @@ Essa é uma forma de verificar a posição dos seus itens e espaçamento do grid
 
 ## Colunas
 Podemos definir o tamanho e quantidade das colunas da seguinte forma:
-```
+```css
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -38,7 +38,7 @@ Podemos definir o tamanho e quantidade das colunas da seguinte forma:
 Utilizando a unidade de medida *fr* (fração), dizemos que nosso grid terá três colunas e, seus tamanhos, serão de 100% do tamanho do container, divido pela quantidade de medidas (fr, pxs, etc.);
 
 Podemos, também, deixar o tamanho de uma coluna fixa em píxeis e as outras duas variam de acordo com a largura do container. Por exemplo:
-```
+```css
 .container {
     display: grid;
     grid-template-columns: 1fr 150px 1fr;
@@ -47,7 +47,7 @@ Podemos, também, deixar o tamanho de uma coluna fixa em píxeis e as outras dua
 
 ## Linhas
 As linhas são definidas da mesma forma do que as colunas. A unica diferença é o comando que utilizaremos para definir a propriedade de tamanho.
-```
+```css
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -58,7 +58,7 @@ No exemplo acima, definimos que nosso grid, agora, possui 3 colunas e duas linha
 
 ### Quando temos o mesmo tamanho para todos as colunas/linhas
 Quando o tamanho das linhas ou colunas forem iguais, podemos utilizar a seguinte propriedade:
-```
+```css
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -120,7 +120,6 @@ No exemplo que já temos, temos um grid com três colunas, duas linhas e cinco i
 |               |               |
 |               |               |
 |               |               |
-|               |               |
 ---------------------------------
 |          |         |          |
 |          |         |          |
@@ -128,7 +127,7 @@ No exemplo que já temos, temos um grid com três colunas, duas linhas e cinco i
 ----------------------------------
 ```
 Para desenharmos o layout da seguinte forma, precisamos definir que o primeiro item comece na primeira linha virtual da coluna e termine na terceira linha virtual dela. Também precisamos dizer que ele deverá começar na primeira linha virtual da linha do grid e terminar na segunda linha virtual do grid.
-```
+```css
 .container > div:nth-child(1) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -139,7 +138,7 @@ Para desenharmos o layout da seguinte forma, precisamos definir que o primeiro i
 }
 ```
 Precisamos, agora, definir o segundo item. Sua coluna começará na segunda linha virtual do grid e terminará na quinta linha virtual do grid.
-```
+```css
 .container > div:nth-child(2) {
     grid-column-start: 2;
     grid-column-end: 4;
@@ -150,7 +149,7 @@ Precisamos, agora, definir o segundo item. Sua coluna começará na segunda linh
 }
 ```
 Agora, automaticamente, o resto se dividirá no grid. Precisamos, apenas, alinhar no centro.
-```
+```css
 .container > div:nth-child(n + 2) {
     justify-self: center;
     align-self: center;
